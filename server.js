@@ -16,6 +16,7 @@ app.use(session({
     resave: false,
 }));
 app.use(express.static('public'));
+app.use(express.static(__dirname + '/public')) //serves public folders
 app.use((req, res, next) => {
     res.locals.message = req.session.message;
     delete req.session.message;
