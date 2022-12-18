@@ -20,7 +20,11 @@ const userSchema = new mongoose.Schema({
         type: Date,
         required: true,
         default: Date.now,
-    }
+    },
+    data: {
+        type: String,
+        required: true,
+    },
 });
 
 module.exports = mongoose.model('User', userSchema);
